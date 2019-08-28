@@ -22,6 +22,8 @@ public class TimgManager {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+//                收到新需求后调用 countDown();
+                countDown();
                 upDataTime();
             }
         }, 3000);//3秒后执行Runnable中的run方法
@@ -30,5 +32,12 @@ public class TimgManager {
 
     public void upDataTime() {
         Log.i(TAG, "upDataTime: 上报服务端");
+    }
+
+    /**
+     * 接到加入倒计时功能，加入新方法
+     */
+    public void countDown() {
+        Log.i(TAG, "countDown: 倒计时装圈圈");
     }
 }

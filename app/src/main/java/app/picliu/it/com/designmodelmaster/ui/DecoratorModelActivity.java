@@ -1,5 +1,6 @@
 package app.picliu.it.com.designmodelmaster.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import app.picliu.it.com.designmodelmaster.R;
 import app.picliu.it.com.designmodelmaster.decoratormodel.CountDownTimeWatch;
 import app.picliu.it.com.designmodelmaster.decoratormodel.ReadTimer;
+import app.picliu.it.com.designmodelmaster.decoratormodel.ui.FindBookActivity;
 import app.picliu.it.com.designmodelmaster.manager.TimgManager;
 
 /**
@@ -31,6 +33,8 @@ public class DecoratorModelActivity extends AppCompatActivity implements View.On
         mTvStartNewCompute.setOnClickListener(this);
         TextView mTvStartPackageCompute = findViewById(R.id.tv_start_package_compute);
         mTvStartPackageCompute.setOnClickListener(this);
+        TextView mTvStartFindbook = findViewById(R.id.tv_start_findbook);
+        mTvStartFindbook.setOnClickListener(this);
     }
 
     /**
@@ -47,11 +51,13 @@ public class DecoratorModelActivity extends AppCompatActivity implements View.On
         TimgManager timgManager = new TimgManager();
         timgManager.computeTime();
         /**
-         * 然后有一天我们的产品夏松说说要在计时的时候价格计时的圈圈
+         * 然后有一天我们的产品夏松说说要在计时的时候加个计时的圈圈
          *
          * 然后我想的就是在TimgManager管理类里面加个倒计时功能
-         * 首先如果 我直接改了那就违反了六大原则中的开闭原则
-         *
+         * 比如加入countDown()方法
+         * 如果 我直接改了那就违反了六大原则中的开闭原则
+         *后面如果加入功能，会让TimgManager类越来越重
+         * 就像现在项目里面阅读器的BannerManager类
          * 我们应该考虑的是不修改之前写好的功能基础上面去扩展
          *
          * 这时候就要考虑引入设计模式来改善
@@ -103,6 +109,12 @@ public class DecoratorModelActivity extends AppCompatActivity implements View.On
  * 我们要有扩展的思想，这个扩展是指不影响老的代码，就可以加入新的功能
  *
  * 不应该在TimeWatch类里面加入countDown()的具体实现方法
+ *
+ * 还有可以有更多的扩展
+ * 比如后期业务里面  加入了 找书界面，也有类似的功能，
+ *
+ * 可能我们会想到直接在找书页使用 CountDownTimeWatch类
+ *
  */
     }
 
@@ -117,6 +129,9 @@ public class DecoratorModelActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.tv_start_package_compute:
                 initPakegeTime();
+                break;
+            case R.id.tv_start_findbook:
+                startActivity(new Intent(DecoratorModelActivity.this, FindBookActivity.class));
                 break;
             default:
                 break;
