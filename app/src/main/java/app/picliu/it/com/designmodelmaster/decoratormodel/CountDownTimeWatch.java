@@ -25,7 +25,7 @@ public class CountDownTimeWatch extends TimeWatch {
         /**
          * 收到需求  需要开启倒计时功能   countDown();
          */
-        countDown();
+//        countDown();
         super.computeTime();
     }
 }

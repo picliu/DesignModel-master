@@ -1,45 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_design_principle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="面向对象六大设计原则"
+        android:layout_marginTop="30dp"
+        android:text="代理模式"
         android:textColor="#000000"
-        android:textSize="21sp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_agent_old_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="老的实现方式"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_decorator_model"
+        android:id="@+id/tv_agent_agent_function"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="装饰者模式"
+        android:text="静态代理模式方式"
         android:textColor="#000000"
-        android:textSize="21sp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_design_principle" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_agent_old_function" />
 
 
     <TextView
-        android:id="@+id/tv_agent_model"
+        android:id="@+id/tv_dynamic_agent_function"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="代理模式"
+        android:text="动态代理模式方式"
         android:textColor="#000000"
-        android:textSize="21sp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_decorator_model" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_agent_agent_function" />
 </android.support.constraint.ConstraintLayout>

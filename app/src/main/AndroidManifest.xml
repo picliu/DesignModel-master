@@ -19,6 +19,8 @@
         <activity android:name=".ui.DesignPrincipleActivity" />
         <activity android:name=".ui.DecoratorModelActivity" />
         <activity android:name=".decoratormodel.ui.FindBookActivity" />
+        <activity android:name=".agentmodel.AgenterActivity" />
+        <activity android:name=".strategymodel.StrategyModelActivity" />
     </application>
 
 </manifest>

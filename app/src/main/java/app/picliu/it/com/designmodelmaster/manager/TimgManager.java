@@ -24,7 +24,8 @@ public class TimgManager {
             public void run() {
 //                收到新需求后调用 countDown();
                 countDown();
-                upDataTime();
+                upDataTime()
+                ;
             }
         }, 3000);//3秒后执行Runnable中的run方法
 

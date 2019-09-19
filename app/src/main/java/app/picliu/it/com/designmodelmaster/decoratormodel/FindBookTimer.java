@@ -19,7 +19,7 @@ public class FindBookTimer extends Watch {
         /**
          * 具体调用埋点的方法 maidian()
          */
-        maidian();
+//        maidian();
         Log.i(TAG, "computeTime: 开始计时");
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

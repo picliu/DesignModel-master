@@ -56,7 +56,7 @@ public class DecoratorModelActivity extends AppCompatActivity implements View.On
          * 然后我想的就是在TimgManager管理类里面加个倒计时功能
          * 比如加入countDown()方法
          * 如果 我直接改了那就违反了六大原则中的开闭原则
-         *后面如果加入功能，会让TimgManager类越来越重
+         * 后面如果加入功能，会让TimgManager类越来越重
          * 就像现在项目里面阅读器的BannerManager类
          * 我们应该考虑的是不修改之前写好的功能基础上面去扩展
          *
